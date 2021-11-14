@@ -13,7 +13,7 @@ exports.createProduct = (req, res) => {
     let productPicture= [];
     if(req.files.length > 0){
         productPicture = req.files.map((file) => {
-            return {img: file.location};
+            return {img: file.filename};
         })
     } 
 
